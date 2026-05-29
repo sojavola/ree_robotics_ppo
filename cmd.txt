@@ -1,0 +1,24 @@
+cd /media/sojavola/SOJAVOLA1/STAGE/stage_M2_PRISMALAB/projet/ree_robotics_ppo/src
+
+colcon build --packages-select ree_exploration_server ree_exploration_viz ree_exploration_ppo
+
+source install/setup.bash
+
+server start : ros2 run ree_exploration_server server_node
+
+
+
+
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+ros2 launch ree_exploration_viz full_system.launch.py
+
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+ros2 launch ree_exploration_ppo ree_ppo_multi.launch.py
+
+
+tensorboard --logdir tensorboard_logs/ppo
+# → http://localhost:6006

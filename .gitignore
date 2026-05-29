@@ -1,0 +1,39 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Training artifacts
+src/models/
+src/logs/
+src/tensorboard_logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+dist/
+*.so
+
+# PyTorch checkpoints
+*.pt
+*.pth
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.log
