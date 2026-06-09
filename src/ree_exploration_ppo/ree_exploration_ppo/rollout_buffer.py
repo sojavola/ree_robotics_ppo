@@ -2,7 +2,7 @@
 On-policy Rollout Buffer with GAE-Lambda for PPO — ree_exploration_ppo.
 
 Collects a fixed-length rollout of ROLLOUT_STEPS transitions, then computes
-Generalized Advantage Estimation (GAE, Schulman et al. 2016) in a single
+Generalized Advantage Estimation  in a single
 vectorized pass before yielding mini-batches for PPO updates.
 
 Storage arrays (pre-allocated, size = ROLLOUT_STEPS):
@@ -33,7 +33,7 @@ class RolloutBuffer:
     def __init__(
         self,
         rollout_steps: int,
-        obs_shape: Tuple[int, ...],
+        obs_shape: Tuple[int, ...], 
         gamma: float = 0.99,
         gae_lambda: float = 0.95,
     ) -> None:
